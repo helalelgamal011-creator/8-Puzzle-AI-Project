@@ -29,10 +29,6 @@ The following search algorithms are implemented in this project:
 
 Each algorithm is implemented in a separate folder with its own source code and documentation.
 
-## Project Structure
-
-8-Puzzle-AI-Project/ │ ├── BFS/ │   ├── bfs.py │   └── README.md │ ├── DFS/ │   ├── dfs.py │   └── README.md │ ├── UCS/ │   ├── ucs.py │   └── README.md │ ├── A-Star/ │   ├── astar.py │   └── README.md │ ├── common/ │   └── puzzle_utils.py │ └── README.md
-
 ## State Representation
 Each puzzle state is represented as a tuple of nine elements, where the value 0 denotes the empty tile.  
 Tuples are used because they are immutable and can be efficiently stored in visited sets.
