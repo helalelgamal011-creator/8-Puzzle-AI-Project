@@ -1,4 +1,4 @@
-##Initial State
+Initial State
 
 1 2 3
 4 0 6
@@ -8,7 +8,7 @@
 
 BFS starts from here.
 
-##BFS – Level 1 (All possible moves)
+BFS – Level 1 (All possible moves)
 
 The blank tile is in the middle → it can move Up / Down / Left / Right
 
@@ -36,7 +36,7 @@ Move 4: Right
 4 6 0
 7 5 8
 
-🔹 BFS stores all these states in a queue in the same order.
+ BFS stores all these states in a queue in the same order.
 
 ##BFS – Level 2
 
@@ -48,7 +48,7 @@ First state checked:
 4 2 6
 7 5 8
 
-❌ Not the Goal
+Not the Goal
 
 Next state:
 
@@ -64,7 +64,7 @@ Compare with the Goal:
 
 Still one move away.
 
-##Expansion from this state
+Expansion from this state
 
 Move: Right
 
@@ -74,7 +74,7 @@ Move: Right
 
 Goal Reached
 
-##Solution Path (Final path)
+Solution Path (Final path)
 
 Step 1:
 
@@ -94,7 +94,7 @@ Step 3 (Right):
 4 5 6
 7 8 0
 
-##BFS Summary (Good to memorize for discussion)
+BFS Summary (Good to memorize for discussion)
 
 BFS finds the solution in the minimum number of moves.
 
@@ -105,6 +105,7 @@ BFS explores all states level by level.
  Optimal
 
  High memory usage
+
 Run:
 ```python
 bfs(start_state)
