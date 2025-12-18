@@ -116,7 +116,3 @@ Pros:
 
 Cons:
 - High memory usage
-
-Run:
-```python
-bfs(start_state)
