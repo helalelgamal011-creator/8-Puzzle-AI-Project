@@ -1,111 +1,94 @@
-Initial State
+Solution
 
-1 2 3
-4 0 6
-7 5 8
+## 1️⃣ Initial State
 
-0 is the blank tile.
+1 2 3 4 0 6 7 5 8
 
-BFS starts from here.
+- `0` is the blank tile.
+- BFS (Breadth-First Search) starts from this state.
 
-BFS – Level 1 (All possible moves)
+---
 
-The blank tile is in the middle → it can move Up / Down / Left / Right
+## 2️⃣ BFS – Level 1 (All possible moves)
 
-Move 1: Up
+The blank tile is in the middle → it can move **Up / Down / Left / Right**.
 
-1 0 3
-4 2 6
-7 5 8
+**Move 1: Up**
 
-Move 2: Down
+1 0 3 4 2 6 7 5 8
 
-1 2 3
-4 5 6
-7 0 8
+**Move 2: Down**
 
-Move 3: Left
+1 2 3 4 5 6 7 0 8
 
-1 2 3
-0 4 6
-7 5 8
+**Move 3: Left**
 
-Move 4: Right
+1 2 3 0 4 6 7 5 8
 
-1 2 3
-4 6 0
-7 5 8
+**Move 4: Right**
 
- BFS stores all these states in a queue in the same order.
+1 2 3 4 6 0 7 5 8
 
-##BFS – Level 2
+> BFS stores all these states in a queue in the same order.
+
+---
+
+## 3️⃣ BFS – Level 2
 
 BFS examines the states one by one in order.
 
-First state checked:
+**First state checked:**
 
-1 0 3
-4 2 6
-7 5 8
+1 0 3 4 2 6 7 5 8
 
-Not the Goal
+❌ Not the Goal
 
-Next state:
+**Next state:**
 
-1 2 3
-4 5 6
-7 0 8
+1 2 3 4 5 6 7 0 8
 
 Compare with the Goal:
 
-1 2 3
-4 5 6
-7 8 0
+1 2 3 4 5 6 7 8 0
 
 Still one move away.
 
-Expansion from this state
+---
 
-Move: Right
+## 4️⃣ Expansion from this state
 
-1 2 3
-4 5 6
-7 8 0
+**Move: Right**
 
-Goal Reached
+1 2 3 4 5 6 7 8 0
 
-Solution Path (Final path)
+🎯 Goal Reached
 
-Step 1:
+---
 
-1 2 3
-4 0 6
-7 5 8
+## 5️⃣ Solution Path (Final Path)
 
-Step 2 (Down):
+**Step 1: Initial State**
 
-1 2 3
-4 5 6
-7 0 8
+1 2 3 4 0 6 7 5 8
 
-Step 3 (Right):
+**Step 2 (Down)**
 
-1 2 3
-4 5 6
-7 8 0
+1 2 3 4 5 6 7 0 8
 
-BFS Summary (Good to memorize for discussion)
+**Step 3 (Right)**
 
-BFS finds the solution in the minimum number of moves.
+1 2 3 4 5 6 7 8 0
 
-Solution = 2 Moves
+---
 
-BFS explores all states level by level.
+## 6️⃣ BFS Summary
 
- Optimal
+- BFS finds the solution in the **minimum number of moves**.
+- **Solution = 2 Moves**
+- BFS explores all states **level by level**.
 
- High memory usage
+**Pros:**
+- ✔️ Optimal (finds the shortest path)
 
-Run:
-```python
-bfs(start_state)
+**Cons:**
+- ❌ High memory usage
