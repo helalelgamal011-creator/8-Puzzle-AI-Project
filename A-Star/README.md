@@ -83,6 +83,7 @@ Step 3 (Right)
 
 - Uses more memory than DFS
 - Heuristic computation adds overhead
+
 Run:
 ```python
 astar(start_state)
