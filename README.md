@@ -44,14 +44,6 @@ Depending on the position of the empty tile, the following moves are permitted:
 - Move Left
 - Move Right
 
-## Technologies Used
-- Programming Language: Python 3
-- Standard Libraries:
-  - collections
-  - heapq
-
-No external libraries are required.
-
 ## How to Run
 Example usage:
 ```python
