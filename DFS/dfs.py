@@ -1,15 +1,21 @@
-from common.puzzle_utils import get_neighbors, GOAL_STATE
+from common import GOAL_STATE, get_neighbors, print_puzzle
 
-def dfs(start, limit=50):
-    stack = [(start, [])]
+def dfs(start):
+    stack = [(start,[start])]
     visited = set()
-
     while stack:
         state, path = stack.pop()
-        if state == GOAL_STATE:
+        if state==GOAL_STATE:
             return path
-        if len(path) < limit:
-            for n in get_neighbors(state):
-                if n not in visited:
-                    visited.add(n)
-                    stack.append((n, path + [n]))
+        if state in visited:
+            continue
+        visited.add(state)
+        for n in reversed(get_neighbors(state)):
+            if n not in visited:
+                stack.append((n,path+[n]))
+
+if __name__=="__main__":
+    start = (1,2,3,4,0,6,7,5,8)
+    path = dfs(start)
+    for s in path:
+        print_puzzle(s)
