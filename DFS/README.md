@@ -107,7 +107,3 @@ Step 3 (Right)
 
 - Not guaranteed to be optimal (may not find shortest path)
 - Can get stuck in deep paths or loops
-
-Run:
-```python
-dfs(start_state)
