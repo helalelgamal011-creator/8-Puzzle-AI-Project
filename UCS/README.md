@@ -116,7 +116,3 @@ Step 3 (Right)
 
 - Higher memory usage than DFS
 - Slightly slower than DFS for small problems
-
-Run:
-```python
-ucs(start_state)
