@@ -1,94 +1,118 @@
-Solution
+# 8-Puzzle BFS Solution
 
-## 1️⃣ Initial State
+## Initial State
 
-1 2 3 4 0 6 7 5 8
+1 2 3
+4 0 6
+7 5 8
 
-- `0` is the blank tile.
+- 0 is the blank tile.
 - BFS (Breadth-First Search) starts from this state.
 
 ---
 
-## 2️⃣ BFS – Level 1 (All possible moves)
+## BFS – Level 1 (All possible moves)
 
-The blank tile is in the middle → it can move **Up / Down / Left / Right**.
+The blank tile is in the middle and can move Up, Down, Left, or Right.
 
-**Move 1: Up**
+Move 1: Up
 
-1 0 3 4 2 6 7 5 8
+1 0 3
+4 2 6
+7 5 8
 
-**Move 2: Down**
+Move 2: Down
 
-1 2 3 4 5 6 7 0 8
+1 2 3
+4 5 6
+7 0 8
 
-**Move 3: Left**
+Move 3: Left
 
-1 2 3 0 4 6 7 5 8
+1 2 3
+0 4 6
+7 5 8
 
-**Move 4: Right**
+Move 4: Right
 
-1 2 3 4 6 0 7 5 8
+1 2 3
+4 6 0
+7 5 8
 
-> BFS stores all these states in a queue in the same order.
+BFS stores all these states in a queue in the same order.
 
 ---
 
-## 3️⃣ BFS – Level 2
+## BFS – Level 2
 
 BFS examines the states one by one in order.
 
-**First state checked:**
+First state checked:
 
-1 0 3 4 2 6 7 5 8
+1 0 3
+4 2 6
+7 5 8
 
-❌ Not the Goal
+Not the Goal
 
-**Next state:**
+Next state:
 
-1 2 3 4 5 6 7 0 8
+1 2 3
+4 5 6
+7 0 8
 
 Compare with the Goal:
 
-1 2 3 4 5 6 7 8 0
+1 2 3
+4 5 6
+7 8 0
 
 Still one move away.
 
 ---
 
-## 4️⃣ Expansion from this state
+## Expansion from this state
 
-**Move: Right**
+Move: Right
 
-1 2 3 4 5 6 7 8 0
+1 2 3
+4 5 6
+7 8 0
 
-🎯 Goal Reached
-
----
-
-## 5️⃣ Solution Path (Final Path)
-
-**Step 1: Initial State**
-
-1 2 3 4 0 6 7 5 8
-
-**Step 2 (Down)**
-
-1 2 3 4 5 6 7 0 8
-
-**Step 3 (Right)**
-
-1 2 3 4 5 6 7 8 0
+Goal Reached
 
 ---
 
-## 6️⃣ BFS Summary
+## Solution Path (Final Path)
 
-- BFS finds the solution in the **minimum number of moves**.
-- **Solution = 2 Moves**
-- BFS explores all states **level by level**.
+Step 1: Initial State
 
-**Pros:**
-- ✔️ Optimal (finds the shortest path)
+1 2 3
+4 0 6
+7 5 8
 
-**Cons:**
-- ❌ High memory usage
+Step 2 (Down)
+
+1 2 3
+4 5 6
+7 0 8
+
+Step 3 (Right)
+
+1 2 3
+4 5 6
+7 8 0
+
+---
+
+## BFS Summary
+
+- BFS finds the solution in the minimum number of moves.
+- Solution = 2 Moves
+- BFS explores all states level by level.
+
+Pros:
+- Optimal (finds the shortest path)
+
+Cons:
+- High memory usage
