@@ -14,3 +14,18 @@ def get_neighbors(state):
         new[zero], new[move] = new[move], new[zero]
         neighbors.append(tuple(new))
     return neighbors
+
+def manhattan(state):
+    dist = 0
+    for i, val in enumerate(state):
+        if val == 0:
+            continue
+        r1,c1 = divmod(i,3)
+        r2,c2 = divmod(val-1,3)
+        dist += abs(r1-r2)+abs(c1-c2)
+    return dist
+
+def print_puzzle(state):
+    for i in range(0,9,3):
+        print(state[i],state[i+1],state[i+2])
+    print()
