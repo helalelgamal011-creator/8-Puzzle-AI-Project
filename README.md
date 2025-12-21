@@ -152,6 +152,27 @@ Example:
 4 0 6  
 7 5 8
 
+# 8-Puzzle Algorithms Comparison
+
+This table compares the search algorithms used in the 8-Puzzle project in terms of optimality, speed, and memory usage.
+
+## Algorithms Comparison
+
+| Algorithm | Optimal (Shortest Path) | Speed | Memory Usage |
+|----------|-------------------------|-------|--------------|
+| **DFS (Depth-First Search)** | ❌ No | Fast (may go deep unnecessarily) | Very Low |
+| **BFS (Breadth-First Search)** | ✅ Yes | Slow | Very High |
+| **IDS (Iterative Deepening Search)** | ✅ Yes | Medium | Low |
+| **UCS (Uniform Cost Search)** | ✅ Yes | Slow | High |
+| **A\* (A-Star Search)** | ✅ Yes | Fastest | High |
+
+## Conclusion
+
+- DFS is memory efficient but not optimal.
+- BFS and UCS guarantee optimal solutions but consume high memory.
+- IDS provides a balance between memory usage and optimality.
+- A* offers the best performance in terms of speed while maintaining optimality when using an admissible heuristic.
+
 ## How to Run
 Example usage in Python:
 
