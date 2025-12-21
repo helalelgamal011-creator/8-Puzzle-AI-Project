@@ -194,6 +194,38 @@ solution = a_star(start_state)
 print("A* Solution:")
 for step in solution:
     print_puzzle(step)
+
+8-Puzzle Algorithms Comparison
+Algorithm
+Idea
+Optimal?
+Memory Usage
+Difficulty (Study)
+DFS
+Go deep in one path first
+❌ No
+Low
+Easy
+BFS
+Explore level by level
+✅ Yes
+Very High
+Easy–Medium
+IDS
+DFS with increasing depth
+✅ Yes
+Medium
+Medium
+UCS
+Expand lowest cost g(n)
+✅ Yes
+High
+Medium
+A*
+Use g(n) + h(n)
+✅ Yes
+High
+Hardest
 Conclusion
 
 This project demonstrates the differences between classical artificial intelligence search algorithms when applied to the 8-Puzzle Problem.
