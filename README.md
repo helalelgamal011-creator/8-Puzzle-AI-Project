@@ -212,7 +212,7 @@ print("A* Solution:")
 for step in solution:
     print_puzzle(step)
 
-## Conclusion
+Conclusion
 
 This project demonstrates the differences between classical artificial intelligence search algorithms when applied to the 8-Puzzle Problem.
 Among the implemented approaches, the A* search algorithm achieved the best performance due to the use of heuristic guidance.
